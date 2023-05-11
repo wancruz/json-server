@@ -9,11 +9,10 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 server.use(router);
 
-// Forneça um adaptador de memória ao JSON Server
 router.db._.mixin({
   write: () => true
 });
 
-server.listen(process.env.PORT || 8000, () => {
+server.listen(process.env.PORT || 5000, () => {
   console.log('JSON Server is running');
 });
